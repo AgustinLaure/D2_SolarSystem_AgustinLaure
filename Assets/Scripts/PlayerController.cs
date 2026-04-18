@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private bool isAccel = false;
     private Vector3 rotationDir;
+    private bool isShoot = false;
 
     private void Awake()
     {
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         isAccel = Input.GetKey(KeyCode.LeftShift);
+        isShoot = Input.GetKey(KeyCode.F);
 
         rotationDir = new Vector3(-Input.GetAxisRaw("Vertical"), Input.GetAxisRaw("Horizontal"), -Input.GetAxisRaw("Forward"));
     }
