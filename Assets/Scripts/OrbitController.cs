@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Planet : MonoBehaviour
+public class OrbitController : MonoBehaviour
 {
-    [SerializeField] float orbitSpeed;
-    [SerializeField] Transform rotationAxis;
-    [SerializeField] Vector2 rotationOffsetXY;
+    [SerializeField] private float orbitSpeed;
+    [SerializeField] private Transform rotationAxis;
+    [SerializeField] private Vector2 rotationOffsetXY;
     private float angle;
     private float rotationRadius;
 
@@ -20,14 +20,12 @@ public class Planet : MonoBehaviour
 
     private void Update()
     {
-        orbit();
+        Orbit();
     }
 
-    private void orbit()
+    private void Orbit()
     {
         angle += Time.deltaTime * orbitSpeed;
-        Debug.Log(angle);
-        Debug.Log(" ");
 
         if (angle >= 360)
         {
