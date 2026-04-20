@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         isAccel = Input.GetKey(KeyCode.LeftShift);
         isShoot = Input.GetKey(KeyCode.F);
 
-        rotationDir = new Vector3(-Input.GetAxisRaw("Vertical"), Input.GetAxisRaw("Horizontal"), -Input.GetAxisRaw("Forward"));
+        rotationDir = new Vector3(Input.GetAxisRaw("Vertical"), Input.GetAxisRaw("Horizontal"), -Input.GetAxisRaw("Forward"));
     }
 
     public bool GetIsAccel() => isAccel;

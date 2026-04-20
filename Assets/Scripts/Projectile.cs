@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private Vector3 startPos;
+    protected Vector3 startPos;
     protected float projSpeed;
     protected Vector3 projDirection;
     protected float maxDistance;
@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     {
         transform.position = startPos;
     }
-    protected void Update()
+    protected void ProjectileUpdate()
     {
         Move();
         CheckLifespan();
