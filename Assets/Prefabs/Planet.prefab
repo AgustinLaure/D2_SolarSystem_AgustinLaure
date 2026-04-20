@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 3206158326683764461}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,3 +263,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbitSpeed: 1
   rotationAxis: {fileID: 0}
+  rotationOffsetXY: {x: 0, y: 0}
