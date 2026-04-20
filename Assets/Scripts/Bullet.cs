@@ -2,24 +2,22 @@ using UnityEngine;
 
 public class Bullet : Projectile
 {
-    [SerializeField] float speed;
-
     private void Awake()
     {
-        projSpeed = speed;
         maxDistance = 1000f;
-        maxTimeAlive = 40f;
+        maxTimeAlive = 10f;
     }
 
-    private void Update()
+    protected override void Update()
     {
-        ProjectileUpdate();
+        base.Update();
     }
 
-    public void Set(Vector3 initialPos, float speed, Vector3 direction)
+    public void Shoot(Vector3 shootingPos, Vector3 direction, float speed, float damage)
     {
-        startPos = initialPos;
-        projSpeed = speed;
-        projDirection = direction;
+        startPos = shootingPos;
+        this.speed = speed;
+        this.damage = damage;
+        this.direction = direction;
     }
 }

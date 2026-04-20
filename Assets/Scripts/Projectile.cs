@@ -3,8 +3,11 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     protected Vector3 startPos;
-    protected float projSpeed;
-    protected Vector3 projDirection;
+
+    protected float speed;
+    protected Vector3 direction;
+    protected float damage;
+
     protected float maxDistance;
     protected float maxTimeAlive;
 
@@ -15,14 +18,14 @@ public class Projectile : MonoBehaviour
     {
         transform.position = startPos;
     }
-    protected void ProjectileUpdate()
+    protected virtual void Update() 
     {
         Move();
         CheckLifespan();
     }
     protected void Move()
     {
-        transform.position += projDirection * (projSpeed * Time.deltaTime);
+        transform.position += direction * (speed * Time.deltaTime);
 
         currentDistance = (transform.position - startPos).magnitude;
     }

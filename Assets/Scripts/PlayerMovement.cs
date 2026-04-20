@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.rotation *= Quaternion.AngleAxis(rotationSpeed * Time.deltaTime, controller.RotationDir);
 
-        if (controller.GetIsAccel())
+        if (controller.IsAccel)
         {
             transform.position += transform.forward * (moveSpeed * Time.deltaTime);
         }
