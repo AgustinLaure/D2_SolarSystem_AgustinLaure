@@ -132,6 +132,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9db3de3a151f2e0439b3c11e14203935, type: 2}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 0.55
       objectReference: {fileID: 0}
@@ -355,6 +359,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 93138e82be943f94ab2a43b1312c8abe, type: 2}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 2
       objectReference: {fileID: 0}
@@ -362,6 +370,14 @@ PrefabInstance:
       propertyPath: rotationAxis
       value: 
       objectReference: {fileID: 715325102}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: rotationOffsetXY.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: rotationOffsetXY.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8326025610585827002, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -537,6 +553,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &410725011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410725012}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410725012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410725011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.504723, y: -50.664738, z: -29.653364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &625715161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -549,6 +596,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0208e8bfde43418408955122cd9c4a02, type: 2}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 0.18
@@ -793,6 +844,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a1bc1423b6d492b41b65bf842f5ded68, type: 2}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 1.48
       objectReference: {fileID: 0}
@@ -879,6 +934,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 25bd42891db0b384495d38f120bd7aa1, type: 2}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 0.22
       objectReference: {fileID: 0}
@@ -964,6 +1023,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 83dd49a1122219144914ae7f487ed6b1, type: 2}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 0.4
@@ -1092,6 +1155,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 3c632da5ac7c5f94c8e73f749fd0c1f9, type: 2}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 1.02
       objectReference: {fileID: 0}
@@ -1165,6 +1232,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4ec096a746f6f2a4bbfd5c30a93bdfcd, type: 2}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 0.28
@@ -1272,7 +1343,7 @@ Transform:
   m_GameObject: {fileID: 2109543195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07999992, y: 46.65789, z: -40.18}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1286,17 +1357,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 137357225032657760, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
+      propertyPath: shotSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 137357225032657760, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
+      propertyPath: shotDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 137357225032657760, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
+      propertyPath: shootingCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1947361753805356413, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
       propertyPath: bulletContainer
       value: 
       objectReference: {fileID: 2109543196}
     - target: {fileID: 2168289304857068403, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
       propertyPath: moveSpeed
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2168289304857068403, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
       propertyPath: rotationSpeed
-      value: 50
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2802591952861858762, guid: f4c0559683eed1c458af9ddf57109267, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1363,6 +1446,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 546858e52c7242347948bcb7ae3bf961, type: 2}
+    - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
+      propertyPath: isOrbiting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206158326683764461, guid: bfa2ebe763f8ace4988a7d50124cc81e, type: 3}
       propertyPath: orbitSpeed
       value: 1.25
@@ -1447,3 +1534,4 @@ SceneRoots:
   - {fileID: 1628106477}
   - {fileID: 2150027029259409654}
   - {fileID: 2109543196}
+  - {fileID: 410725012}
