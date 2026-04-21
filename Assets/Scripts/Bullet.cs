@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : Projectile
@@ -19,5 +20,17 @@ public class Bullet : Projectile
         this.speed = speed;
         this.damage = damage;
         this.direction = direction;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Planet"))
+        {
+            OnPlanetCollision();
+        }
+    }
+    private void OnPlanetCollision()
+    {
+        Destroy(gameObject);
     }
 }

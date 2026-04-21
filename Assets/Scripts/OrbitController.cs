@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class OrbitController : MonoBehaviour
 {
+    [SerializeField] private bool isOrbiting = true;
     [SerializeField] private float orbitSpeed;
     [SerializeField] private Transform rotationAxis;
     [SerializeField] private Vector2 rotationOffsetXY;
@@ -25,13 +26,16 @@ public class OrbitController : MonoBehaviour
 
     private void Orbit()
     {
-        angle += Time.deltaTime * orbitSpeed;
-
-        if (angle >= 360)
+        if (isOrbiting)
         {
-            angle = 0;
-        }
+            angle += Time.deltaTime * orbitSpeed;
 
-        transform.position = new Vector3(rotationRadius * Mathf.Cos(angle-rotationOffsetXY.x), transform.position.y, rotationRadius * Mathf.Sin(angle- rotationOffsetXY.y));
+            if (angle >= 360)
+            {
+                angle = 0;
+            }
+
+            transform.position = new Vector3(rotationRadius * Mathf.Cos(angle - rotationOffsetXY.x), transform.position.y, rotationRadius * Mathf.Sin(angle - rotationOffsetXY.y));
+        }
     }
 }
