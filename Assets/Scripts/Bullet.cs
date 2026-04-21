@@ -28,8 +28,18 @@ public class Bullet : Projectile
         {
             OnPlanetCollision();
         }
+
+        if (collision.gameObject.CompareTag("Sun"))
+        {
+            OnPlanetCollision();
+        }
     }
     private void OnPlanetCollision()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnSunCollision()
     {
         Destroy(gameObject);
     }
